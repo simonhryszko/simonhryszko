@@ -1,0 +1,87 @@
+name: Render CV
+
+on:
+  push:
+    branches: [ main, master ]
+  create:
+    tags:
+      - '*'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install RenderCV
+      run: |
+        pip install "rendercv[full]"
+
+    - name: Find and process YAML files
+      id: find_files
+      run: |
+        # Find all YAML files in resume directory
+        files=$(find resume -name "*.yaml" -o -name "*.yml" 2>/dev/null || true)
+
+        if [ -z "$files" ]; then
+          echo "No YAML files found in resume/ directory"
+          exit 0
+        fi
+
+        echo "Found CV files:"
+        echo "$files"
+
+        # Create output directory
+        mkdir -p rendercv_output
+
+        # Process each file
+        for file in $files; do
+          filename=$(basename "$file" .yaml)
+          echo "Processing $file -> $filename"
+
+          # Render the CV
+          rendercv render "$file" || {
+            echo "Failed to render $file"
+            continue
+          }
+
+          # Move output files to organized location
+          if [ -f "${filename}.pdf" ]; then
+            mv "${filename}.pdf" "rendercv_output/${filename}.pdf"
+          fi
+          if [ -f "${filename}.html" ]; then
+            mv "${filename}.html" "rendercv_output/${filename}.html"
+          fi
+          if [ -f "${filename}.md" ]; then
+            mv "${filename}.md" "rendercv_output/${filename}.md"
+          fi
+          if [ -f "${filename}_1.png" ]; then
+            mv "${filename}_1.png" "rendercv_output/${filename}_1.png"
+          fi
+          if [ -f "${filename}.typ" ]; then
+            mv "${filename}.typ" "rendercv_output/${filename}.typ"
+          fi
+        done
+
+        echo "render_complete=true" >> $GITHUB_OUTPUT
+
+    - name: Upload artifacts
+      if: steps.find_files.outputs.render_complete == 'true'
+      uses: actions/upload-artifact@v3
+      with:
+        name: cv-outputs
+        path: rendercv_output/
+        retention-days: 30
+
+    - name: List generated files
+      if: steps.find_files.outputs.render_complete == 'true'
+      run: |
+        echo "Generated files:"
+        ls -la rendercv_output/
