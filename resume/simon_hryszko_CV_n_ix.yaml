@@ -1,0 +1,127 @@
+cv:
+  name: Simon Hryszko
+  location: Remote
+  email: simonhryszko@gmail.com
+  website:
+  # social_networks:
+  #   - network: LinkedIn
+  #     username: john.doe
+  #   - network: GitHub
+  #     username: john.doe
+  sections:
+    education:
+      - institution: State University of Applied Sciences in Jarosław (PWSTE)
+        area: Computer Science
+        degree: Bachelor of Engineering
+        location: Jaroslaw, Poland
+        start_date: 2019-09
+        end_date: 2023-06
+        highlights:
+          - 'GPA: 4.5/5.0 - Earned merit scholarship for 2 years'
+    experience:
+      - company: Dürr AG (Fitech Software)
+        position: DevOps Engineer
+        location: Remote
+        start_date: 2021-01
+        end_date: 2025-09
+        summary: DevOps engineer specializing in Kubernetes infrastructure, automation, and large-scale distributed systems
+        highlights:
+          - Managed Kubernetes clusters using comprehensive toolset (kubectl, kubeseal, k9s, etc.)
+          - Built scalable infrastructure with Terraform, Ansible, Teamcity
+          - Implemented GitOps workflows (ArgoCD, Helm)
+          - Automated operations with Python and Bash scripting
+      - company: Magently
+        position: Full Stack Developer
+        location: Remote
+        start_date: 2020-01
+        end_date: 2021-01
+        summary: Full stack developer focused on web application development
+        highlights:
+          - Developed web applications leveraging Vue.js
+          - Built robust development environments using Docker
+    projects:
+      - name: n8n Ambassador
+        date: 2022 - 2025
+        location: Remote, Poland
+        summary: Community leadership and ambassador role for n8n automation platform
+        highlights:
+          - Provided hundreds of solutions to community members, enhancing workflow automation capabilities
+          - Organized offline meetups and community events to promote n8n adoption and knowledge sharing
+      - name: Hack4Change Hackathon
+        date: June 2024
+        location: Gdansk, Poland
+        summary: Won first place out of 14 teams in two categories
+        highlights:
+          - Built scalable full-stack solutions (FastAPI + Vue.js) for shadow data aggregation and real-time path finding algorithms
+          - Won first place in both categories out of 14 teams through innovative technical implementations
+      - name: HackYeah Hackathon
+        date: September 2023
+        location: Cracow, Poland
+        summary: Developed AI-powered natural language to SQL translation solution
+        highlights:
+          - Built native text-to-SQL translation system with fine-tuned AI models using Python FastAPI and Jupyter
+          - Deployed solution with Docker for containerized execution environment
+      - name: n8n OSS Contributions
+        date: September 2023
+        location: Remote
+        summary: Open source contributions enhancing n8n automation functionality
+        highlights:
+          - Developed two custom nodes for n8n n8n-api and wordnik, expanding automation capabilities
+          - Used TypeScript, n8n framework, and GitHub Actions (npmjs) for development and deployment
+    skills:
+      - label: Programming Languages
+        details: Bash, Python, Go (new)
+      - label: DevOps & Cloud
+        details: Kubernetes, Docker, AWS, Terraform, Ansible, Helm, ArgoCD
+      - label: Database & Messaging
+        details: PostgreSQL, Redis, Kafka
+      - label: Infrastructure & CI/CD
+        details: Linux, Git, CI/CD, REST APIs
+      - label: Automation
+        details: n8n, Windmill, GitHub Actions
+      - label: Languages
+        details: Polish (native), English (B2/C1)
+design:
+  theme: engineeringresumes
+locale:
+  language: en
+  phone_number_format: international
+  page_numbering_template: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  last_updated_date_template: Last updated in TODAY
+  date_template: MONTH_ABBREVIATION YEAR
+  month: month
+  months: months
+  year: year
+  years: years
+  present: present
+  to: –
+  abbreviations_for_months:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - June
+    - July
+    - Aug
+    - Sept
+    - Oct
+    - Nov
+    - Dec
+  full_names_of_months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+rendercv_settings:
+  date: '2025-10-27'
+  render_command:
+  bold_keywords: []
