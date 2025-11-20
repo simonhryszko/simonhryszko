@@ -12,63 +12,74 @@ cv:
     education:
       - institution: State University of Applied Sciences in Jarosław (PWSTE)
         area: Computer Science
-        degree: B.Eng.
-        location: Jarosław, Poland
-        start_date: 2019-10
+        degree: Bachelor of Engineering
+        location: Jaroslaw, Poland
+        start_date: 2019-09
         end_date: 2023-06
         highlights:
-          - "GPA: 4.5/5.0"
-          - "Earned merit scholarship for 2 years"
+          - 'GPA: 4.5/5.0'
+          - Earned merit scholarship for 2 years
     experience:
-      - company: LERT
-        position: Junior Software Engineer
-        date:
-        start_date: 2024-02
-        end_date: present
-        location: Kraków, Poland
-        highlights:
-          - Working on medical software solutions
-          - Developing and maintaining web applications
-      - company: VerifiedCEO
-        position: Software Engineer
-        date:
-        start_date: 2022-10
-        end_date: 2024-01
+      - company: Dürr AG (Fitech Software)
+        position: DevOps Engineer
         location: Remote
+        start_date: 2021-01
+        end_date: present
+        summary: DevOps engineer specializing in Kubernetes infrastructure and automation
         highlights:
-          - Developed software for CEO identity verification
-          - Built and maintained web applications
-          - Worked with modern web technologies
+          - Managed Kubernetes clusters using comprehensive toolset (kubectl, kubeseal, k9s, etc.)
+          - Built scalable infrastructure with Terraform, Ansible, Teamcity
+          - Implemented GitOps workflows (ArgoCD, Helm)
+          - Automated operations with Python and Bash scripting
+      - company: Magently
+        position: Full Stack Developer
+        location: Remote
+        start_date: 2020-01
+        end_date: 2021-01
+        summary: Full stack developer focused on web application development
+        highlights:
+          - Developed web applications leveraging Vue.js
+          - Built robust development environments using Docker
     projects:
-      - name: Medical Records Management System
-        date:
-        start_date: 2023-06
-        end_date: 2023-12
-        summary: Developed a comprehensive medical records management system for healthcare providers
+      - name: n8n Ambassador
+        date: 2022 - 2025
+        location: Remote, Poland
+        summary: Community leadership and ambassador role for n8n automation platform
         highlights:
-          - Built using React and FastAPI with PostgreSQL database
-          - Implemented patient data management and appointment scheduling
-          - Ensured HIPAA compliance and data security
-      - name: E-commerce Platform
-        date:
-        start_date: 2022-09
-        end_date: 2023-02
-        summary: Full-stack e-commerce platform with payment integration
+          - Provided hundreds of solutions to community members on forum, enhancing workflow automation capabilities with technical expertise and guidance
+          - Organized offline meetups and community events to promote n8n adoption and knowledge sharing
+      - name: Hack4Change Hackathon
+        date: June 2024
+        location: Gdansk, Poland
+        summary: Won first place out of 14 teams in two categories
         highlights:
-          - Developed using Next.js and Node.js with MongoDB
-          - Integrated Stripe payment processing
-          - Implemented user authentication and order management
+          - Built full-stack solutions (FastAPI + Vue.js) for shadow data aggregation and path finding algorithms
+          - Won first place in both categories out of 14 teams through innovative technical implementations
+      - name: HackYeah Hackathon
+        date: September 2023
+        location: Cracow, Poland
+        summary: Developed AI-powered natural language to SQL translation solution
+        highlights:
+          - Built native text-to-SQL translation system with fine-tuned AI models using Python FastAPI and Jupyter
+          - Deployed solution with Docker for containerized execution environment
+      - name: n8n OSS Contributions
+        date: September 2023
+        location: Remote
+        summary: Open source contributions enhancing n8n automation functionality
+        highlights:
+          - Developed two custom nodes for n8n n8n-api and wordnik, expanding automation capabilities
+          - Used TypeScript, n8n framework, and GitHub Actions (npmjs) for development and deployment
     skills:
-      - label: Programming Languages
-        details: Python, TypeScript, JavaScript, Java, C++, SQL
-      - label: Web Technologies
-        details: React, Node.js, Express, FastAPI, Django
-      - label: Database
-        details: PostgreSQL, MongoDB, Redis
-      - label: DevOps & Tools
-        details: Git, Docker, AWS, CI/CD, Linux
+      - label: DevOps & Cloud
+        details: Kubernetes, Docker, AWS, Terraform, Ansible, Helm, ArgoCD
+      - label: Programming & Scripting
+        details: Python, Bash, TypeScript
+      - label: Infrastructure & CI/CD
+        details: Linux, Git, CI/CD, REST APIs
+      - label: Automation
+        details: n8n, Windmill, GitHub Actions
       - label: Languages
-        details: Polish (native), English (C1)
+        details: Polish (native), English (B2/C1)
 design:
   theme: engineeringresumes
 locale:
